@@ -55,10 +55,10 @@ Product View App is an Android application that displays a catalog of products s
 - Integrating Android intents to send email from the app
 
 ### Notes
-> All product data is stored locally in SQLite.
-> The database is **reset and repopulated** every time `MainActivity` starts.
-> Product images are stored as byte arrays (BLOB).
-> To view the database click **View > Tool Windows > App Inspection
+> - All product data is stored locally in SQLite.
+> - The database is **reset and repopulated** every time `MainActivity` starts.
+> - Product images are stored as byte arrays (BLOB).
+> - To view the database click **View > Tool Windows > App Inspection
   ![Database](screenshots/database.png)
 
 ## Author

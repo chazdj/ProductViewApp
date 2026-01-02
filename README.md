@@ -1,53 +1,39 @@
-# Product View App 📱
+# Product View App 
 
-This is an Android application for browsing and selecting products from a local SQLite database. Users can select multiple products and navigate to a second screen to see their choices.
+## Overview
+Product View App is an Android application that displays a catalog of products stored locally in an SQLite database. Users can select multiple products, view the selected items on a second screen, and share the product details via email.
 
----
+## Features
+- Scrollable product list with images, names, descriptions, and prices  
+- Multi‑select products using checkboxes  
+- Pass selected products to another screen using Parcelable  
+- Share selected product details through email  
+- Fully offline — no network access required  
 
-## ✨ Features
+## Tech Stack
+- Java (Android SDK)  
+- Android Studio  
+- SQLite local database  
+- Parcelable for inter‑activity data transfer
 
-- Displays a list of products with:
-  - Name
-  - Description
-  - Price
-  - Seller
-  - Image
-- Allows selecting products with checkboxes
-- Requires selecting at least **3 products** to proceed
-- Passes selected products to the next screen using Parcelable
-- Fully offline—no network access needed
+## Project Structure
+- `activities/` — Main and secondary activities for UI screens  
+- `adapters/` — Adapter binding product data to RecyclerView  
+- `database/` — SQLite helper for storing and retrieving products  
+- `models/` — `Product` data class implementing Parcelable  
+- `res/layout/` — UI XML layouts  
+- `res/drawable/` — Product images and assets
 
----
+## How to Build and Run
+1. Clone the repository
+  ```bash
+  git clone https://github.com/chazdj/ProductViewApp.git
+  ```
+2. Open the project in Android Studio
+3. Sync Gradle and build the project
+4. Run on an emulator or physical Android device
 
-## 🚀 How to Build and Run
-
-1. **Clone the repository**
-
-`git clone https://github.com/Chazdj0510/ProductViewApp.git`
-
-2. **Open in Android Studio**
-
-  - Launch Android Studio.
-  - Choose **Open an existing project**.
-  - Select the project folder you cloned.
-
-3. **Sync Gradle**
-
-  Android Studio should automatically sync Gradle. If not, click **File > Sync Project  with Gradle Files**.
-
-4. **Build the project**
-
-  - Click **Build > Make Project**.
-
-5. **Run on emulator or device**
-
-  - Connect a device or launch an emulator.
-  - Click the green **Run** button.
-
----
-
-## 📝 Usage
-
+## Usage
 1. **Launch the app.**
 2. The product catalog will be shown in a scrollable list.
    - ![Product Catolog](screenshots/main_page.png)
@@ -62,46 +48,19 @@ This is an Android application for browsing and selecting products from a local 
    - ![Email Render](screenshots/email_rendered.png)
    - ![Email](screenshots/email.png)
 
----
+## What I Learned
+- Working with RecyclerView and custom adapters
+- Using SQLite for persistent local storage
+- Passing data between screens with Parcelable
+- Integrating Android intents to send email from the app
 
-## 🛠️ Project Structure
-
-- `activities/`  
-Contains `MainActivity` (product list) and `SecondActivity` (selected products).
-- `adapters/`  
-`ProductAdapter` binds product data to RecyclerView.
-- `database/`  
-`ProductDatabaseHelper` manages SQLite operations.
-- `models/`  
-`Product` model class implements `Parcelable`.
-- `res/layout/`  
-XML files for UI (`activity_main.xml`, `item_product.xml`, etc.).
-- `res/drawable/`  
-Product images and placeholders.
-
----
-
-## ⚠️ Notes
-
-- All product data is stored locally in SQLite.
-- The database is **reset and repopulated** every time `MainActivity` starts.
-- Product images are stored as byte arrays (BLOB).
-- To view the database click **View > Tool Windows > App Inspection
+### Notes
+> All product data is stored locally in SQLite.
+> The database is **reset and repopulated** every time `MainActivity` starts.
+> Product images are stored as byte arrays (BLOB).
+> To view the database click **View > Tool Windows > App Inspection
   ![Database](screenshots/database.png)
 
----
-
-## ✏️ Customization
-
-To modify products or images:
-
-- Edit the `populateDatabase()` method in `MainActivity.java`.
-- Update images in `res/drawable`.
-- Update strings in `res/values/strings.xml`.
-
----
-
-## 🧑‍💻 Author
-
+## Author
 Created by **Chastidy Joanem**  
-GitHub: @chazdj0510(https://github.com/chazdj0510)
+GitHub: @chazdj(https://github.com/chazdj)

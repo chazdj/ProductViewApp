@@ -54,7 +54,7 @@ Product View App is an Android application that displays a catalog of products s
 - Passing data between screens with Parcelable
 - Integrating Android intents to send email from the app
 
-### Notes
+> Notes:
 > - All product data is stored locally in SQLite.
 > - The database is **reset and repopulated** every time `MainActivity` starts.
 > - Product images are stored as byte arrays (BLOB).

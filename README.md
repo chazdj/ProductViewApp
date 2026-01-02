@@ -63,4 +63,4 @@ Product View App is an Android application that displays a catalog of products s
 
 ## Author
 Created by **Chastidy Joanem**  
-GitHub: [@chazdj(https://github.com/chazdj)]
+GitHub: ![@chazdj](https://github.com/chazdj)
